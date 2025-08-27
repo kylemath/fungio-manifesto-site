@@ -1,0 +1,238 @@
+body {
+    font-family: 'Garamond', 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background-color: #fffef9;
+    color: #2a2a2a;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 0.3em;
+    color: #8b4513;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 3em;
+    color: #666;
+}
+
+.epigraph {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    margin: 3em 0;
+    color: #666;
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #8b4513;
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #a0522d;
+    margin-top: 2.5em;
+    margin-bottom: 1.2em;
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 1.4em;
+    text-indent: 2em;
+}
+
+p:first-of-type {
+    text-indent: 0;
+}
+
+h2 + p, h3 + p, blockquote + p {
+    text-indent: 0;
+}
+
+blockquote {
+    margin: 2em 2em;
+    font-style: italic;
+    color: #555;
+    border-left: 3px solid #deb887;
+    padding-left: 1.5em;
+}
+
+blockquote p {
+    text-indent: 0;
+}
+
+a {
+    color: #8b4513;
+    text-decoration: none;
+    border-bottom: 1px dotted #8b4513;
+}
+
+a:hover {
+    color: #a0522d;
+    border-bottom: 1px solid #a0522d;
+}
+
+.chapter-break {
+    text-align: center;
+    margin: 3em 0;
+    color: #8b4513;
+    font-size: 1.5em;
+}
+
+.emphasis {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.simulation {
+    background-color: #f9f7f4;
+    border: 2px solid #8b4513;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.simulation canvas {
+    border: 1px solid #666;
+    margin: 15px;
+    background: white;
+}
+
+.simulation button {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.simulation button:hover {
+    background-color: #a0522d;
+}
+
+.toc {
+    background-color: #f9f7f4;
+    padding: 30px;
+    margin: 40px 0;
+    border: 1px solid #deb887;
+    border-radius: 5px;
+}
+
+.toc h2 {
+    margin-top: 0;
+    color: #8b4513;
+}
+
+.toc ol {
+    list-style-type: upper-roman;
+    color: #666;
+}
+
+.toc ol ol {
+    list-style-type: decimal;
+    margin-top: 10px;
+}
+
+.toc a {
+    color: #666;
+    border-bottom: none;
+}
+
+.toc a:hover {
+    color: #8b4513;
+}
+
+footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.part-transition {
+    background-color: #f5f3f0;
+    border-left: 4px solid #8b4513;
+    padding: 30px;
+    margin: 40px 0;
+    font-style: italic;
+}
+
+.part-transition h3 {
+    color: #8b4513;
+    margin-top: 0;
+    font-size: 1.3em;
+    text-align: center;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+}
+
+.part-transition p {
+    text-indent: 0;
+    color: #555;
+    margin-bottom: 1.2em;
+}
+
+.speculation-note {
+    background-color: #fff8dc;
+    border: 2px solid #daa520;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    font-size: 0.95em;
+}
+
+.speculation-warning {
+    background-color: #ffe4e1;
+    border: 2px solid #cd5c5c;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    font-size: 0.95em;
+}
+
+.speculation-note p, .speculation-warning p {
+    text-indent: 0;
+    margin-bottom: 1em;
+}
+
+.speculation-note p:last-child, .speculation-warning p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 30px 20px;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+}
