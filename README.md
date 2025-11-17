@@ -16,3 +16,5 @@ Simply open `index.html` in your browser to view locally.
 
 - `index.html` - Main manifesto content
 - `fungio_style.css` - Styling for the site
+
+
