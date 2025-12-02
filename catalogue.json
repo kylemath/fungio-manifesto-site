@@ -1,0 +1,11 @@
+{
+  "id": "fungio-manifesto-site",
+  "title": "Fungio Manifesto Site",
+  "oneLiner": "A complete manifesto on Life's hidden partnerships",
+  "demoUrl": "https://fungioergosum.com/",
+  "screenshot": "https://raw.githubusercontent.com/kylemath/fungio-manifesto-site/main/screenshot.png",
+  "kind": "longform",
+  "categories": ["writing", "symbiosis", "biology"],
+  "tags": ["writing", "symbiosis", "biology"],
+  "status": "published"
+}

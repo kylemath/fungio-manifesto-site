@@ -18,3 +18,10 @@ Simply open `index.html` in your browser to view locally.
 - `fungio_style.css` - Styling for the site
 
 
+
+## Preview
+
+<p align="center">
+  <img src="screenshot.png" alt="Project screenshot" width="720" />
+</p>
+
