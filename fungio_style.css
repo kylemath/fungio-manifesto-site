@@ -1,18 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Garamond', 'Georgia', 'Times New Roman', serif;
     line-height: 1.8;
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 60px 40px;
+    margin: 0;
+    padding: 0;
     background-color: #fffef9;
     color: #2a2a2a;
     font-size: 18px;
 }
 
+/* Banner Styles */
+.banner-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b4513;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+/* Header Content */
+.header-content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 40px 40px;
+    background-color: #fffef9;
+}
+
 h1 {
     font-size: 2.8em;
     text-align: center;
-    margin-bottom: 0.3em;
+    margin: 0 0 0.3em 0;
     color: #8b4513;
     font-weight: normal;
     letter-spacing: 2px;
@@ -23,7 +53,7 @@ h1 {
     text-align: center;
     font-style: italic;
     font-size: 1.2em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     color: #666;
 }
 
@@ -31,7 +61,7 @@ h1 {
     text-align: center;
     font-style: italic;
     font-size: 1.1em;
-    margin: 3em 0;
+    margin: 2em 0 0;
     color: #666;
     padding: 30px 0;
     border-top: 1px solid #ddd;
@@ -135,36 +165,9 @@ a:hover {
     background-color: #a0522d;
 }
 
+/* TOC styles - deprecated in favor of tab navigation */
 .toc {
-    background-color: #f9f7f4;
-    padding: 30px;
-    margin: 40px 0;
-    border: 1px solid #deb887;
-    border-radius: 5px;
-}
-
-.toc h2 {
-    margin-top: 0;
-    color: #8b4513;
-}
-
-.toc ol {
-    list-style-type: upper-roman;
-    color: #666;
-}
-
-.toc ol ol {
-    list-style-type: decimal;
-    margin-top: 10px;
-}
-
-.toc a {
-    color: #666;
-    border-bottom: none;
-}
-
-.toc a:hover {
-    color: #8b4513;
+    display: none;
 }
 
 footer {
@@ -227,12 +230,364 @@ footer {
     margin-bottom: 0;
 }
 
+/* Tab Navigation Styles */
+.tab-navigation {
+    background-color: #8b4513;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tab-navigation.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-family: 'Garamond', 'Georgia', serif;
+    text-align: left;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle:hover {
+    background-color: #a0522d;
+}
+
+.mobile-menu-toggle span {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tab-button {
+    flex: 1 1 auto;
+    min-width: 150px;
+    padding: 15px 20px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-right: 1px solid #754311;
+    font-size: 16px;
+    font-family: 'Garamond', 'Georgia', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tab-button:last-child {
+    border-right: none;
+}
+
+.tab-button:hover {
+    background-color: #a0522d;
+}
+
+.tab-button.active {
+    background-color: #fffef9;
+    color: #8b4513;
+    font-weight: bold;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 40px 60px;
+}
+
+.tab-content {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Progress Vine Tracker */
+.progress-vine {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vine-line {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    bottom: 30px;
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #deb887 10%,
+        #8b4513 50%,
+        #deb887 90%,
+        transparent
+    );
+    transform: translateX(-50%);
+    opacity: 0.4;
+    border-radius: 2px;
+}
+
+.vine-node {
+    position: relative;
+    z-index: 101;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.vine-node:hover {
+    transform: translateX(-5px);
+}
+
+.node-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fffef9;
+    border: 3px solid #deb887;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+    position: relative;
+}
+
+.node-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #8b4513;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+}
+
+.vine-node:hover .node-circle {
+    border-color: #8b4513;
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+}
+
+.vine-node:hover .node-circle::before {
+    opacity: 0.3;
+    transform: scale(1.2);
+}
+
+.node-symbol {
+    font-size: 16px;
+    font-weight: bold;
+    color: #8b4513;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+}
+
+.node-label {
+    font-size: 13px;
+    color: #666;
+    background-color: #fffef9;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #deb887;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vine-node:hover .node-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.vine-node.active .node-circle {
+    background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+    border-color: #8b4513;
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.5),
+                0 0 40px rgba(139, 69, 19, 0.2);
+}
+
+.vine-node.active .node-circle::before {
+    opacity: 0.5;
+    transform: scale(1.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.vine-node.active .node-symbol {
+    color: #fffef9;
+    transform: scale(1.1);
+}
+
+.vine-node.active .node-label {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: #8b4513;
+    color: #fffef9;
+    border-color: #8b4513;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1.3);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.5);
+    }
+}
+
+/* Add organic branching details */
+.vine-node::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    width: 15px;
+    height: 2px;
+    background: linear-gradient(to left, #deb887, transparent);
+    opacity: 0.3;
+    transition: all 0.3s ease;
+}
+
+.vine-node:hover::after,
+.vine-node.active::after {
+    opacity: 0.6;
+    width: 20px;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .banner-container {
+        max-height: 250px;
+    }
+    
+    .banner-image {
+        max-height: 250px;
+    }
+    
+    .header-content {
+        padding: 30px 20px 20px;
+    }
+    
     body {
-        padding: 30px 20px;
         font-size: 16px;
     }
+    
     h1 {
         font-size: 2.2em;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .tab-list {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .tab-list.show {
+        display: flex;
+    }
+    
+    .tab-button {
+        min-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #754311;
+        text-align: left;
+    }
+    
+    .tab-button:last-child {
+        border-bottom: none;
+    }
+    
+    .content-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .tab-navigation.sticky {
+        position: relative;
+    }
+    
+    /* Hide progress vine on mobile */
+    .progress-vine {
+        display: none;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tab-button {
+        min-width: 120px;
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+    
+    /* Hide progress vine on tablet */
+    .progress-vine {
+        display: none;
+    }
+}
+
+/* Large tablet/small desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .progress-vine {
+        right: 20px;
+    }
+    
+    .node-circle {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .node-symbol {
+        font-size: 14px;
+    }
+    
+    .node-label {
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }

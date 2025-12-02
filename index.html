@@ -13,76 +13,103 @@
     <link rel="stylesheet" href="fungio_style.css">
 </head>
 <body>
-
-    <h1>Fungio Ergo Cogito Ergo Sum</h1>
-    <div class="subtitle">A Complete Manifesto on Life's Hidden Partnerships</div>
-    
-    <div class="epigraph">
-        "I am fungal, therefore I think, therefore I am"<br>
-        — The hidden truth inscribed in every cell of your body
+    <!-- Banner Image -->
+    <div class="banner-container">
+        <img src="bannerLarge.png" alt="Fungio Manifesto Banner" class="banner-image">
     </div>
 
-    <div class="toc">
-        <h2>Table of Contents</h2>
-        <ol>
-            <li><a href="#preface">Preface: The Breath Between Kingdoms</a></li>
-            <li><a href="#part1">Part I: Foundations</a>
-                <ol>
-                    <li><a href="#origins">Origins: The Dawn of the Mycelial Earth</a></li>
-                    <li><a href="#precedents">Precedents: When Biology Rewrote Its Rules</a></li>
-                    <li><a href="#coevolution">Co-Evolution: The Dance of Kingdoms</a></li>
-                </ol>
-            </li>
-            <li><a href="#part2">Part II: The Hypothesis</a>
-                <ol>
-                    <li><a href="#architectures">Haunted Architectures</a></li>
-                    <li><a href="#evidence">The Evidence: When Coincidence Becomes Conspiracy</a></li>
-                    <li><a href="#cambrian">The Cambrian Event: Evolution's Greatest Mystery</a></li>
-                </ol>
-            </li>
-            <li><a href="#part3">Part III: Applications</a>
-                <ol>
-                    <li><a href="#medicine">Medicine & The Mycobiome</a></li>
-                    <li><a href="#technology">Technology: Fungal Futures</a></li>
-                    <li><a href="#ecology">Ecology: The Planet as Organism</a></li>
-                </ol>
-            </li>
-            <li><a href="#part4">Part IV: Marine Partnerships</a>
-                <ol>
-                    <li><a href="#coral-colonies">Coral Colonies: The Ocean's Lichens</a></li>
-                    <li><a href="#sponge-networks">Sponge Networks: Ancient Partnerships</a></li>
-                    <li><a href="#cnidarian-mysteries">Cnidarian Mysteries: When Animals Became Gardens</a></li>
-                </ol>
-            </li>
-            <li><a href="#part5">Part V: Architectural Blueprints</a>
-                <ol>
-                    <li><a href="#tissue-templates">Tissue Templates: Fungal Blueprints in Animal Bodies</a></li>
-                    <li><a href="#organ-geometry">Organ Geometry: The Mathematics of Partnership</a></li>
-                    <li><a href="#developmental-choreography">Developmental Choreography: Building Bodies Together</a></li>
-                </ol>
-            </li>
-            <li><a href="#part6">Part VI: Neural Networks and Consciousness</a>
-                <ol>
-                    <li><a href="#network-origins">Network Origins: When Fungi Learned to Think</a></li>
-                    <li><a href="#consciousness-substrate">The Consciousness Substrate</a></li>
-                    <li><a href="#distributed-mind">The Distributed Mind</a></li>
-                </ol>
-            </li>
-            <li><a href="#part7">Part VII: The Sacred Mycelium</a>
-                <ol>
-                    <li><a href="#religious-experiences">Religious Experiences as Fungal Communication</a></li>
-                    <li><a href="#prophet-hypothesis">The Prophet Hypothesis: Messengers of the Mycelium</a></li>
-                    <li><a href="#collective-consciousness">Humanity as Planetary Neural Network</a></li>
-                    <li><a href="#reproductive-organs">Humans as Reproductive Organs of Earth</a></li>
-                    <li><a href="#future-evolution">The Coming Synthesis: What We Are Becoming</a></li>
-                </ol>
-            </li>
-            <li><a href="#conclusion">Conclusion: Embracing the Dance</a></li>
-        </ol>
+    <!-- Tab Navigation -->
+    <nav class="tab-navigation" id="tabNavigation">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span>☰</span> Menu
+        </button>
+        <div class="tab-list" id="tabList">
+            <button class="tab-button active" data-tab="preface">Preface</button>
+            <button class="tab-button" data-tab="part1">Part I: Foundations</button>
+            <button class="tab-button" data-tab="part2">Part II: The Hypothesis</button>
+            <button class="tab-button" data-tab="part3">Part III: Applications</button>
+            <button class="tab-button" data-tab="part4">Part IV: Marine Partnerships</button>
+            <button class="tab-button" data-tab="part5">Part V: Architectural Blueprints</button>
+            <button class="tab-button" data-tab="part6">Part VI: Neural Networks</button>
+            <button class="tab-button" data-tab="part7">Part VII: The Sacred Mycelium</button>
+            <button class="tab-button" data-tab="conclusion">Conclusion</button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header-content">
+        <h1>Fungio Ergo Cogito Ergo Sum</h1>
+        <div class="subtitle">A Complete Manifesto on Life's Hidden Partnerships</div>
+        <div class="epigraph">
+            "I am fungal, therefore I think, therefore I am"<br>
+            — The hidden truth inscribed in every cell of your body
+        </div>
     </div>
 
-    <div id="content">
-        <!-- Content will be loaded here -->
+    <!-- Progress Vine Tracker -->
+    <div class="progress-vine" id="progressVine">
+        <div class="vine-line"></div>
+        <div class="vine-node" data-chapter="preface" title="Preface">
+            <div class="node-circle">
+                <span class="node-symbol">◈</span>
+            </div>
+            <div class="node-label">Preface</div>
+        </div>
+        <div class="vine-node" data-chapter="part1" title="Part I: Foundations">
+            <div class="node-circle">
+                <span class="node-symbol">I</span>
+            </div>
+            <div class="node-label">Foundations</div>
+        </div>
+        <div class="vine-node" data-chapter="part2" title="Part II: The Hypothesis">
+            <div class="node-circle">
+                <span class="node-symbol">II</span>
+            </div>
+            <div class="node-label">The Hypothesis</div>
+        </div>
+        <div class="vine-node" data-chapter="part3" title="Part III: Applications">
+            <div class="node-circle">
+                <span class="node-symbol">III</span>
+            </div>
+            <div class="node-label">Applications</div>
+        </div>
+        <div class="vine-node" data-chapter="part4" title="Part IV: Marine Partnerships">
+            <div class="node-circle">
+                <span class="node-symbol">IV</span>
+            </div>
+            <div class="node-label">Marine</div>
+        </div>
+        <div class="vine-node" data-chapter="part5" title="Part V: Architectural Blueprints">
+            <div class="node-circle">
+                <span class="node-symbol">V</span>
+            </div>
+            <div class="node-label">Architecture</div>
+        </div>
+        <div class="vine-node" data-chapter="part6" title="Part VI: Neural Networks">
+            <div class="node-circle">
+                <span class="node-symbol">VI</span>
+            </div>
+            <div class="node-label">Neural Networks</div>
+        </div>
+        <div class="vine-node" data-chapter="part7" title="Part VII: The Sacred Mycelium">
+            <div class="node-circle">
+                <span class="node-symbol">VII</span>
+            </div>
+            <div class="node-label">Sacred Mycelium</div>
+        </div>
+        <div class="vine-node" data-chapter="conclusion" title="Conclusion">
+            <div class="node-circle">
+                <span class="node-symbol">❦</span>
+            </div>
+            <div class="node-label">Conclusion</div>
+        </div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="content-wrapper">
+        <div id="content" class="tab-content">
+            <!-- Content will be loaded here -->
+        </div>
     </div>
 
     <footer>
@@ -92,6 +119,34 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const contentDiv = document.getElementById('content');
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const tabList = document.getElementById('tabList');
+            const tabNavigation = document.getElementById('tabNavigation');
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', function() {
+                tabList.classList.toggle('show');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!tabNavigation.contains(event.target) && window.innerWidth <= 768) {
+                    tabList.classList.remove('show');
+                }
+            });
+
+            // Sticky navigation on scroll (after banner)
+            const banner = document.querySelector('.banner-container');
+            const bannerHeight = banner ? banner.offsetHeight : 0;
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > bannerHeight) {
+                    tabNavigation.classList.add('sticky');
+                } else {
+                    tabNavigation.classList.remove('sticky');
+                }
+            });
             
             // All chapter content embedded to avoid CORS issues
             const chapters = {
@@ -704,19 +759,18 @@
 
 <div class="chapter-break">❦</div>`;
 
-            // Load chapters in order
-            const chapterOrder = ['preface', 'part1', 'part2', 'part3'];
-            
-            chapterOrder.forEach(function(chapterKey) {
-                const chapterDiv = document.createElement('div');
-                chapterDiv.innerHTML = chapters[chapterKey];
-                contentDiv.appendChild(chapterDiv);
-            });
-            
-            // Add the continuation
-            const continuationDiv = document.createElement('div');
-            continuationDiv.innerHTML = part2_continuation;
-            contentDiv.appendChild(continuationDiv);
+            // Combine all chapter content into organized sections
+            const allChapters = {
+                preface: chapters.preface,
+                part1: chapters.part1,
+                part2: chapters.part2 + part2_continuation,
+                part3: chapters.part3,
+                part4: ``,
+                part5: ``,
+                part6: ``,
+                part7: ``,
+                conclusion: ``
+            };
 
             // Add remaining parts
             const remainingParts = `
@@ -1300,9 +1354,86 @@
 
 <div class="chapter-break">❦</div>`;
 
-            const remainingDiv = document.createElement('div');
-            remainingDiv.innerHTML = remainingParts;
-            contentDiv.appendChild(remainingDiv);
+            // Parse remaining parts into chapters
+            allChapters.part4 = remainingParts.substring(
+                remainingParts.indexOf('<h2 id="part4">'),
+                remainingParts.indexOf('<h2 id="part5">')
+            );
+            allChapters.part5 = remainingParts.substring(
+                remainingParts.indexOf('<h2 id="part5">'),
+                remainingParts.indexOf('<h2 id="part6">')
+            );
+            allChapters.part6 = remainingParts.substring(
+                remainingParts.indexOf('<h2 id="part6">'),
+                remainingParts.indexOf('<h2 id="part7">')
+            );
+            allChapters.part7 = remainingParts.substring(
+                remainingParts.indexOf('<h2 id="part7">'),
+                remainingParts.indexOf('<h2 id="conclusion">')
+            );
+            allChapters.conclusion = remainingParts.substring(
+                remainingParts.indexOf('<h2 id="conclusion">')
+            );
+
+            // Function to show a specific chapter
+            function showChapter(chapterKey) {
+                contentDiv.innerHTML = allChapters[chapterKey] || '<p>Chapter not found.</p>';
+                
+                // Update active tab
+                tabButtons.forEach(btn => {
+                    if (btn.dataset.tab === chapterKey) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+
+                // Update progress vine
+                const vineNodes = document.querySelectorAll('.vine-node');
+                vineNodes.forEach(node => {
+                    if (node.dataset.chapter === chapterKey) {
+                        node.classList.add('active');
+                    } else {
+                        node.classList.remove('active');
+                    }
+                });
+
+                // Close mobile menu after selection
+                if (window.innerWidth <= 768) {
+                    tabList.classList.remove('show');
+                }
+
+                // Scroll to show content (accounting for sticky nav)
+                const headerContent = document.querySelector('.header-content');
+                const headerHeight = headerContent ? headerContent.offsetHeight : 0;
+                const navHeight = tabNavigation.offsetHeight;
+                const scrollTarget = bannerHeight + navHeight + headerHeight;
+                
+                window.scrollTo({
+                    top: scrollTarget,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Add click handlers to tab buttons
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabKey = this.dataset.tab;
+                    showChapter(tabKey);
+                });
+            });
+
+            // Add click handlers to vine nodes
+            const vineNodes = document.querySelectorAll('.vine-node');
+            vineNodes.forEach(node => {
+                node.addEventListener('click', function() {
+                    const chapterKey = this.dataset.chapter;
+                    showChapter(chapterKey);
+                });
+            });
+
+            // Show initial chapter (preface)
+            showChapter('preface');
             
             console.log('All chapters loaded successfully');
         });
