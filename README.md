@@ -6,7 +6,7 @@ A comprehensive exploration of fungal consciousness and its role in evolution - 
 
 This site is automatically deployed to Netlify when changes are pushed to the main branch.
 
-**Live Site:** https://fungioergosum.com
+**Live Site:** https://kylemath.github.io/fugio-manifesto-site
 
 ## Local Development
 
