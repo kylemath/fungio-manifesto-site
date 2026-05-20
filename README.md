@@ -2,11 +2,18 @@
 
 A comprehensive exploration of fungal consciousness and its role in evolution - the hidden partnerships that shape all life.
 
+**Live web book:** https://kylemath.github.io/fungio-manifesto-site
+
+<p align="center">
+  <img src="screenshot.png" alt="Project screenshot" width="400" />
+</p>
+
+
 ## Deployment
 
-This site is automatically deployed to Netlify when changes are pushed to the main branch.
+This site is automatically deployed to github pages
 
-**Live Site:** https://kylemath.github.io/fugio-manifesto-site
+**Live Site:** https://kylemath.github.io/fungio-manifesto-site
 
 ## Local Development
 
@@ -20,8 +27,4 @@ Simply open `index.html` in your browser to view locally.
 
 
 ## Preview
-
-<p align="center">
-  <img src="screenshot.png" alt="Project screenshot" width="720" />
-</p>
 
